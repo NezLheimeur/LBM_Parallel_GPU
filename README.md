@@ -1,4 +1,4 @@
-# LBM mini project in C++ (CPU)
+# LBM mini project in C++ OpenACC (GPU)
 
 A minimal cmake based project skeleton for 2D LBM (Lattice Boltzmann Method) simulation.
 
