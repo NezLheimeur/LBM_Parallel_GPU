@@ -1,4 +1,4 @@
-# LBM mini project in C++ (CPU)
+# LBM mini project in C++ OpenACC (GPU)
 
 A minimal cmake based project skeleton for 2D LBM (Lattice Boltzmann Method) simulation.
 
@@ -19,16 +19,16 @@ make
 ./src/lbm
 ```
 
-## Your task
+## Task
 
-Derive a parallel version of this code using OpenACC : 
+Derive a parallel version of this code using OpenACC.
 
-- run and analyze the code, identify the computing kernels containing loops to parallelize with OpenACC directives
-- the cmake build is already able to build source code containing OpenACC directives, 
-  all you have to do is to uncomment lines annotate with `TODO`
-- implement parallelization by provide OpenACC directives in selected location
-- re-build the code with Nvidia nvc++ compiler (OpenACC compiler):
+The graph below resumes the results for different size of grid. The speed up is more impressive for bigger grid.    
+                  <div style="text-align:center">![image](https://user-images.githubusercontent.com/64479324/111080437-be0cc680-84fe-11eb-8f09-547f321bb3f9.png)</div>
 
+
+## How to build the OpenACC version ?
+comment all the OpenAcc directive under the TODO comment in the main and in the different CMakeLists.Txt
 ```bash
 mkdir build_openacc
 cd build_openacc
